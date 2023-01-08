@@ -7,13 +7,9 @@ public class Lorry extends Car {
     int loadingAmount = 8490; //грузоподъемность в киллограммах
     VehicleClass vehicleClass = VehicleClass.LARGE;
 
-    public Lorry(String model) {
-        super(model);
+    public Lorry(String model, Engine engine, Driver driver) {
+        super(model, engine, driver);
         weight = 500;
-        Engine engine = new Engine(6, "CUMMINS ");
-        this.engine = engine;
-        Driver driver1 = new Driver("Вася Иванов ", 20, 2, 5566545);
-        this.driver = driver1;
     }
 
 

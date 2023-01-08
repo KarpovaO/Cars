@@ -10,13 +10,12 @@ public class Car {
     protected Driver driver; //водитель, за которым закреплен автомобиль
     protected Engine engine; // тип мотора типа Engine
 
-    public Car(String model) {
+
+    public Car(String model, Engine engine, Driver driver) {
         this.model = model;
         weight = 50;
-        Engine engine = new Engine(3, "ВАЗ-2103 ");
         this.engine = engine;
-        Driver driver1 = new Driver("Петя ", 30, 3, 2589654);
-        this.driver = driver1;
+        this.driver = driver;
     }
 
     public static void start() {

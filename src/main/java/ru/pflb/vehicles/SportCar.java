@@ -7,13 +7,9 @@ public class SportCar extends Car {
     int maxVelocity = 200; //максимальная скорость в км/ч
     VehicleClass vehicleClass = VehicleClass.SPORTS_CAR;
 
-    public SportCar(String model) {
-        super(model);
+    public SportCar(String model, Engine engine, Driver driver) {
+        super(model, engine, driver);
         weight = 200;
-        Engine engine = new Engine(5, "Valvetronic ");
-        this.engine = engine;
-        Driver driver1 = new Driver("Жанна Начинка ", 40, 22, 1234567);
-        this.driver = driver1;
     }
 
     public String toString() {
