@@ -5,14 +5,15 @@ import ru.pflb.professions.Driver;
 
 public class Car {
     protected String model; //название модели автомобиля
-    protected VehicleClass vehicleClass = VehicleClass.MINI; //класc автомобиля типа vehicleClass
+    protected VehicleClass vehicleClass; //класc автомобиля типа vehicleClass
     protected int weight; //вес автомобиля в килограммах
     protected Driver driver; //водитель, за которым закреплен автомобиль
     protected Engine engine; // тип мотора типа Engine
 
 
-    public Car(String model, Engine engine, Driver driver) {
+    public Car(String model, VehicleClass vehicleClass, Engine engine, Driver driver) {
         this.model = model;
+        this.vehicleClass = vehicleClass;
         weight = 50;
         this.engine = engine;
         this.driver = driver;

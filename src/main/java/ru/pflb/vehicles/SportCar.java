@@ -5,20 +5,15 @@ import ru.pflb.professions.Driver;
 
 public class SportCar extends Car {
     int maxVelocity = 200; //максимальная скорость в км/ч
-    VehicleClass vehicleClass = VehicleClass.SPORTS_CAR;
 
-    public SportCar(String model, Engine engine, Driver driver) {
-        super(model, engine, driver);
+    public SportCar(String model, VehicleClass vehicleClass, Engine engine, Driver driver) {
+        super(model, vehicleClass, engine, driver);
         weight = 200;
     }
 
+    @Override
     public String toString() {
-        return "Модель: " + model +
-                "Класс: " + vehicleClass + System.lineSeparator() +
-                "Характеристики: " + System.lineSeparator() +
-                "Вес: " + weight + System.lineSeparator() +
-                "Двигатель: " + engine + System.lineSeparator() +
-                "Водитель: " + driver + System.lineSeparator() +
+        return super.toString() +
                 "Максимальная скорость " + maxVelocity;
     }
 }
